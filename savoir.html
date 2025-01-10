@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>OpenBox</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+<style>
+  .logo {
+    width: 150px; /* Réduit la taille du logo sur les petits écrans */
+    height: auto;
+}
+
+/* Style pour le header et le menu burger */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.line {
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Menu de navigation */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    display: inline-block;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    background-color: #555;
+}
+
+/* Menu mobile (caché par défaut) */
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+/* Media Query pour les écrans larges */
+@media screen and (min-width: 768px) {
+    .burger-menu {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        position: static;
+    }
+}
+
+/* Media Query pour les petits écrans (mobiles) */
+@media screen and (max-width: 767px) {
+    header {
+        flex-direction: column; /* Empile les éléments en colonne */
+        text-align: center; /* Centre les éléments */
+    }
+
+    .logo {
+        width: 120px; /* Ajuste la taille du logo pour les petits écrans */
+        margin-bottom: 20px; /* Ajoute un espace sous le logo */
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .nav-menu ul li {
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .nav-menu ul li a {
+        padding: 14px;
+        font-size: 18px;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+}
+body {
+    font-family: 'Poppins';font-size: 22px;
+    background-color: black;
+    color: white;
+    
+.logo {
+    width: 200px; /* largeur */
+    height: 200px; /* hauteur */
+}
+
+/* Style pour le header et le menu burger */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.line {
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-menu ul li {
+  display: inline-block;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+  background-color: #555;
+}
+
+/* Menu mobile (caché par défaut) */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+}
+
+.nav-menu.active {
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    position: static;
+  }
+}
+
+.content {
+ text-align: center;
+
+</style>
+</head>
+
+<body>
+   <header>
+    
+<img src="https://image.noelshack.com/fichiers/2025/01/7/1736074619-openbox-2.png" class="logo"> 
+
+   <div class="burger-menu" id="burgerMenu">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <script>// Sélectionner les éléments nécessaires
+    const burgerMenu = document.getElementById('burgerMenu');
+    const navMenu = document.getElementById('navMenu');
+    
+    // Ajouter un événement au clic du menu burger
+    burgerMenu.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+    
+      // S'assurer que le DOM est entièrement chargé avant de manipuler les éléments
+      document.addEventListener("DOMContentLoaded", function() {
+         const burgerMenu = document.getElementById('burgerMenu');
+         const navMenu = document.getElementById('navMenu');
+         
+         // Ajouter un événement au clic du menu burger pour afficher/masquer le menu
+         burgerMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+         });
+      });
+   </script>
+
+  <!-- Menu de navigation -->
+  <nav id="navMenu" class="nav-menu">
+    <ul>
+      <li><a href="/index.html">Accueil</a></li>
+      <li><a href="/savoir.html">Savoir</a></li>
+      <li><a href="#">À propos</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Soutenir</a></li>
+    </ul>
+  </nav>
+   </header>
+   <div class="content">
+  <h1>Bientôt</h1>
+<h3></h3>Page en cours de création.</h3>
+
+</div>
+
+</body>
