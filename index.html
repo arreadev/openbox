@@ -10,7 +10,28 @@
 
 <style>
 .footer {
-  background-color: #333333;
+  .nav-menu ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    display: inline-block;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    background-color: #555;
+}
   }
   .logo {
     width: 150px; /* Réduit la taille du logo sur les petits écrans */
