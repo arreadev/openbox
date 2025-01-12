@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://use.typekit.net/xwa0zel.css">
 <link rel="icon" href="https://image.noelshack.com/fichiers/2025/02/6/1736632434-logo.png" type="image/png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
 <style>
@@ -388,6 +389,64 @@ button:active:after {
 button:active {
  padding-bottom: 10px;
 }
+  /* Style général du footer */
+.footer {
+    background-color: #333; /* Couleur de fond gris foncé */
+    color: white; /* Couleur du texte blanc */
+    padding: 20px 0; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+}
+
+/* Style du contenu du footer */
+.footer-content {
+    max-width: 1200px; /* Largeur maximale du contenu */
+    margin: 0 auto; /* Centrer le contenu */
+    display: flex; /* Utiliser flexbox pour aligner les éléments */
+    justify-content: space-between; /* Espacer les éléments */
+    align-items: center; /* Aligner les éléments verticalement */
+    flex-wrap: wrap; /* Permettre le retour à la ligne des éléments */
+}
+
+/* Style des liens de navigation dans le footer */
+.footer-nav ul {
+    list-style: none; /* Supprimer les puces de la liste */
+    padding: 0; /* Supprimer l'espacement interne */
+    margin: 0; /* Supprimer la marge externe */
+    display: flex; /* Utiliser flexbox pour aligner les éléments */
+}
+
+.footer-nav li {
+    margin: 0 10px; /* Espacement entre les éléments de la liste */
+}
+
+.footer-nav a {
+    color: white; /* Couleur des liens blanc */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+    font-weight: bold; /* Texte en gras */
+}
+
+.footer-nav a:hover {
+    color: #ff6347; /* Couleur des liens au survol */
+}
+
+/* Style des icônes sociales */
+.footer-social {
+    display: flex; /* Utiliser flexbox pour aligner les éléments */
+    justify-content: center; /* Centrer les éléments */
+    margin-top: 10px; /* Espacement au-dessus des icônes */
+}
+
+.social-icon {
+    color: white; /* Couleur des icônes blanc */
+    font-size: 24px; /* Taille des icônes */
+    margin: 0 10px; /* Espacement entre les icônes */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+}
+
+.social-icon:hover {
+    color: #ff6347; /* Couleur des icônes au survol */
+}
+
 </style>
 </head>
 
@@ -449,11 +508,24 @@ button:active {
       <br>
         <br>
           <br>
-<footer>
-  <ul>
-      <li><a href="/privacy.html">Poltique de confidentialité </a></li>
-    <li> <a href="/contact.html"> Contactez-nous </a></li>
-    </ul>
+   <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                   <div class="footer-social">
+                <a href="https://bsky.app/profile/votreprofil" target="_blank" class="social-icon">
+                    <i class="fab fa-twitter"></i> <!-- Utilisez l'icône Twitter pour BlueSky -->
+                </a>
+                <a href="https://github.com/votreprofil" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+                </ul>
+            </nav>
+        </div>
     </footer>
 </body>
 
