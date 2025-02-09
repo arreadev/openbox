@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>OpenBox</title>
+<title>Savoir - OpenBox</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://use.typekit.net/xwa0zel.css">
 <link rel="icon" href="https://image.noelshack.com/fichiers/2025/02/6/1736632434-logo.png" type="image/png">
+<link rel="icon" href="https://image.noelshack.com/fichiers/2025/02/6/1736632434-logo.png" type="image/png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <style>
 
   .logo {
@@ -147,7 +150,7 @@ body {
     font-family: 'Poppins';font-size: 22px;
     background-color: black;
     color: white;
-    
+}
 .logo {
     width: 200px; /* largeur */
     height: 200px; /* hauteur */
@@ -232,7 +235,7 @@ header {
 }
 
 .content {
- text-align: center;
+ text-align: left;
 
 
 
@@ -322,70 +325,7 @@ header {
 .pushable:focus:not(:focus-visible) {
   outline: none;
 }
-/* From Uiverse.io by cssbuttons-io */ 
-button {
- appearance: button;
- background-color: #1899D6;
- border: solid transparent;
- border-radius: 16px;
- border-width: 0 0 4px;
- box-sizing: border-box;
- color: #FFFFFF;
- cursor: pointer;
- display: inline-block;
- font-size: 15px;
- font-weight: 700;
- letter-spacing: .8px;
- line-height: 20px;
- margin: 0;
- outline: none;
- overflow: visible;
- padding: 13px 19px;
- text-align: center;
- text-transform: uppercase;
- touch-action: manipulation;
- transform: translateZ(0);
- transition: filter .2s;
- user-select: none;
- -webkit-user-select: none;
- vertical-align: middle;
- white-space: nowrap;
-}
 
-button:after {
- background-clip: padding-box;
- background-color: #1CB0F6;
- border: solid transparent;
- border-radius: 16px;
- border-width: 0 0 4px;
- bottom: -4px;
- content: "";
- left: 0;
- position: absolute;
- right: 0;
- top: 0;
- z-index: -1;
-}
-
-button:main, button:focus {
- user-select: auto;
-}
-
-button:hover:not(:disabled) {
- filter: brightness(1.1);
-}
-
-button:disabled {
- cursor: auto;
-}
-
-button:active:after {
- border-width: 0 0 0px;
-}
-
-button:active {
- padding-bottom: 10px;
-}
   /* Style général du footer */
 .footer {
     background-color: #333; /* Couleur de fond gris foncé */
@@ -427,11 +367,15 @@ button:active {
     color: #ff6347; /* Couleur des liens au survol */
 }
 
+h1 {
+    font-style: bold;
+}
+
+
 </style>
 </head>
 
 <body>
-
    <header>
     
 <img src="/fichiers/logo 2.png" class="logo"> 
@@ -465,19 +409,23 @@ button:active {
   <!-- Menu de navigation -->
   <nav id="navMenu" class="nav-menu">
     <ul>
-        <li><a href="/index.html">Accueil</a></li>
+      <li><a href="/index.html">Accueil</a></li>
       <li><a href="/savoir.html">Savoir</a></li>
       <li><a href="/about.html">À propos</a></li>
       <li><a href="/contact.html">Contact</a></li>
-      <li><a href="/soutenir">Soutenir</a></li>
+      <li><a href="#">Soutenir</a></li>
     </ul>
   </nav>
    </header>
-   <div class="content">
-  <h1>Bientôt</h1>
-     
-<h3></h3>Page en cours de création.</h3>
-
+   <br>
+   <div class="content"> 
+    
+ <h1>Alternatives à Photoshop</h1>
+ <p>Adobe Photoshop est un logiciel de retouche<br>
+     d'image très populaire, mais il est également coûteux.<br>
+      Heureusement, il existe des alternatives gratuites<br>
+       et open source à Photoshop qui offrent des fonctionnalités<br>
+        similaires sans le coût élevé.</p>
 </div>
 <br>
   <br>
@@ -492,6 +440,7 @@ button:active {
         <br>
           <br>
    <footer class="footer">
+   
         <div class="footer-content">
             <nav class="footer-nav">
                 <ul>
@@ -500,7 +449,7 @@ button:active {
                     <li><a href="/contact.html">Contact</a></li>
                   <li><a href="https://github.com/arreadev/openbox">GitHub</a></li>
                   <li><a href="https://bsky.app/profile/open-box.bsky.social">BlueSky</a></li>
-                    <li><a href="https://github.com/arreadev/openbox/wiki">Wiki</a></li>
+                  <li><a href="https://github.com/arreadev/openbox/wiki">Wiki</a></li>
     
                 </a>
             </div>
@@ -509,3 +458,5 @@ button:active {
         </div>
     </footer>
 </body>
+
+</html>
