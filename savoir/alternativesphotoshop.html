@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Alternatives à Photoshop - OpenBox</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://use.typekit.net/xwa0zel.css">
+<link rel="icon" href="https://image.noelshack.com/fichiers/2025/02/6/1736632434-logo.png" type="image/png">
+<link rel="icon" href="https://image.noelshack.com/fichiers/2025/02/6/1736632434-logo.png" type="image/png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+
+  .logo {
+    width: 150px; /* Réduit la taille du logo sur les petits écrans */
+    height: auto;
+}
+
+/* Style pour le header et le menu burger */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.line {
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Menu de navigation */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    display: inline-block;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    background-color: #555;
+}
+
+/* Menu mobile (caché par défaut) */
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+/* Media Query pour les écrans larges */
+@media screen and (min-width: 768px) {
+    .burger-menu {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        position: static;
+    }
+}
+
+/* Media Query pour les petits écrans (mobiles) */
+@media screen and (max-width: 767px) {
+    header {
+        flex-direction: column; /* Empile les éléments en colonne */
+        text-align: center; /* Centre les éléments */
+    }
+
+    .logo {
+        width: 120px; /* Ajuste la taille du logo pour les petits écrans */
+        margin-bottom: 20px; /* Ajoute un espace sous le logo */
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .nav-menu ul li {
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .nav-menu ul li a {
+        padding: 14px;
+        font-size: 18px;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+}
+body {
+    font-family: 'Poppins';font-size: 22px;
+    background-color: black;
+    color: white;
+}
+.logo {
+    width: 200px; /* largeur */
+    height: 200px; /* hauteur */
+}
+
+/* Style pour le header et le menu burger */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.line {
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-menu ul li {
+  display: inline-block;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+  background-color: #555;
+}
+
+/* Menu mobile (caché par défaut) */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+}
+
+.nav-menu.active {
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    position: static;
+  }
+}
+
+.content {
+ text-align: left;
+
+
+
+
+}
+.pushable {
+  position: relative;
+  background: transparent;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+  outline-offset: 4px;
+  outline-color: deeppink;
+  transition: filter 250ms;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: hsl(226, 25%, 69%);
+  border-radius: 8px;
+  filter: blur(2px);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background: linear-gradient(
+    to right,
+    hsl(248, 39%, 39%) 0%,
+    hsl(248, 39%, 49%) 8%,
+    hsl(248, 39%, 39%) 92%,
+    hsl(248, 39%, 29%) 100%
+  );
+}
+
+.front {
+  display: block;
+  position: relative;
+  border-radius: 8px;
+  background: hsl(248, 53%, 58%);
+  padding: 16px 32px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.pushable:hover {
+  filter: brightness(110%);
+}
+
+.pushable:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.pushable:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+  /* Style général du footer */
+.footer {
+    background-color: #333; /* Couleur de fond gris foncé */
+    color: white; /* Couleur du texte blanc */
+    padding: 200px 0; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+  font-size: 26px; 
+}
+
+/* Style du contenu du footer */
+.footer-content {
+    max-width: 1200px; /* Largeur maximale du contenu */
+    margin: 0 auto; /* Centrer le contenu */
+    display: flex; /* Utiliser flexbox pour aligner les éléments */
+    justify-content: space-between; /* Espacer les éléments */
+    align-items: center; /* Aligner les éléments verticalement */
+    flex-wrap: wrap; /* Permettre le retour à la ligne des éléments */
+}
+
+/* Style des liens de navigation dans le footer */
+.footer-nav ul {
+    list-style: none; /* Supprimer les puces de la liste */
+    padding: 0; /* Supprimer l'espacement interne */
+    margin: 0; /* Supprimer la marge externe */
+    display: flex; /* Utiliser flexbox pour aligner les éléments */
+}
+
+.footer-nav li {
+    margin: 0 10px; /* Espacement entre les éléments de la liste */
+}
+
+.footer-nav a {
+    color: white; /* Couleur des liens blanc */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+    font-weight: bold; /* Texte en gras */
+}
+
+.footer-nav a:hover {
+    color: #ff6347; /* Couleur des liens au survol */
+}
+
+h1 {
+    font-style: bold;
+}
+
+/* Bouton Enregistrer */
+
+.bookmark-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    width: 40px; /* Ajustez la largeur selon vos besoins */
+    height: 40px; /* Ajustez la hauteur selon vos besoins */
+}
+
+.bookmark-button:hover {
+    background-color: #0056b3;
+}
+
+.bookmark-button i {
+    margin-right: 8px;
+}
+/* Bouton Partager */
+.share-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    width: 40px; /* Ajustez la largeur selon vos besoins */
+    height: 40px; /* Ajustez la hauteur selon vos besoins */
+}
+
+.share-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+   <header>
+    
+<img src="/fichiers/logo 2.png" class="logo"> 
+
+   <div class="burger-menu" id="burgerMenu">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <script>// Sélectionner les éléments nécessaires
+    const burgerMenu = document.getElementById('burgerMenu');
+    const navMenu = document.getElementById('navMenu');
+    
+    // Ajouter un événement au clic du menu burger
+    burgerMenu.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+    
+      // S'assurer que le DOM est entièrement chargé avant de manipuler les éléments
+      document.addEventListener("DOMContentLoaded", function() {
+         const burgerMenu = document.getElementById('burgerMenu');
+         const navMenu = document.getElementById('navMenu');
+         
+         // Ajouter un événement au clic du menu burger pour afficher/masquer le menu
+         burgerMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+         });
+      });
+   </script>
+
+  <!-- Menu de navigation -->
+  <nav id="navMenu" class="nav-menu">
+    <ul>
+      <li><a href="/index.html">Accueil</a></li>
+      <li><a href="/savoir.html">Savoir</a></li>
+      <li><a href="/about.html">À propos</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="#">Soutenir</a></li>
+    </ul>
+  </nav>
+   </header>
+   <br>
+   <div class="content"> <div class="tools">
+    <button id="bookmarkButton" class="bookmark-button">
+        <i class="fas fa-bookmark"></i>
+    </button>
+
+    <script>// bouton enregistrer
+        document.getElementById('bookmarkButton').addEventListener('click', function() {
+            alert('Pour ajouter cette page à vos favoris, utilisez Ctrl+D ou Command+D.');
+        });
+        </script>
+        <br>
+        
+         <button id="shareButton" class="share-button">
+            <i class="fas fa-share-alt"></i>
+        </button>
+
+        <script>// bouton partager
+            document.getElementById('shareButton').addEventListener('click', function() {
+                if (navigator.share) {
+                    navigator.share({
+                        title: document.title,
+                        url: window.location.href
+                    }).catch(error => console.error('Error sharing', error));
+                } else {
+                    alert('Partage non supporté sur ce navigateur.');
+                }
+            });</script>
+    
+    </div>
+ <h1>Alternatives à Photoshop</h1>
+ <p>Adobe Photoshop est un logiciel de retouche<br>
+     d'image très populaire, mais il est également coûteux.<br>
+      Heureusement, il existe des alternatives gratuites<br>
+       et open source à Photoshop qui offrent des fonctionnalités<br>
+        similaires sans le coût élevé.<br>
+     Voici quelques-unes des meilleures alternatives <br>
+     à Photoshop que vous pouvez utiliser pour éditer vos photos et images.</p>
+     <h2>1. Photopea</h2>
+     <p>Photopea est une altrenative gratuite, open source et en ligne au logiciel Photoshop. Il propose une interface similaire à celle de Photoshop et propose beaucoup de fonctionnalités. Retrouvez Photopea à cette adresse https://www.photopea.com/</p>
+     <h2>2. Pixlr</h2>
+     <p>Pixlr est un outil gratuit en ligne, qui est plutôt pour les débutants car il possède une interface plus simple et un tutoriel. Il est disponible ici: https://pixlr.com/fr/editor/</p>
+     <h2>3. Krita</h2>
+     <p>Krita est un logiciel de peinture numérique gratuit et open source qui offre des fonctionnalités de retouche d'image et de design similaires à celles de Photoshop. Vous pouvez télécharger le logiciel à cette adresse https://krita.org/fr/download/</p>
+
+</div>
+<br>
+  <br>
+    <br>
+      <br>
+        <br>
+          <br>
+  <br>
+  <br>
+    <br>
+      <br>
+        <br>
+          <br>
+   <footer class="footer">
+   
+        <div class="footer-content">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="/privacy.html">Politique de confidentialité</a></li>
+                    <li><a href="/about.html">À propos</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                  <li><a href="https://github.com/arreadev/openbox">GitHub</a></li>
+                  <li><a href="https://bsky.app/profile/open-box.bsky.social">BlueSky</a></li>
+                  <li><a href="https://github.com/arreadev/openbox/wiki">Wiki</a></li>
+    
+                </a>
+            </div>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
