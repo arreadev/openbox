@@ -232,7 +232,46 @@ header {
 
 .content {
  text-align: center;
+ /* Style général du footer */
+.footer {
+    background-color: #333; /* Couleur de fond gris foncé */
+    color: white; /* Couleur du texte blanc */
+    padding: 200px 0; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+  font-size: 26px; 
+}
 
+/* Style du contenu du footer */
+.footer-content {
+    max-width: 1200px; /* Largeur maximale du contenu */
+    margin: 0 auto; /* Centrer le contenu */
+    display: flex; /* Utiliser flexbox pour aligner les éléments */
+    justify-content: space-between; /* Espacer les éléments */
+    align-items: center; /* Aligner les éléments verticalement */
+    flex-wrap: wrap; /* Permettre le retour à la ligne des éléments */
+}
+
+/* Style des liens de navigation dans le footer */
+.footer-nav ul {
+    list-style: none; /* Supprimer les puces de la liste */
+    padding: 0; /* Supprimer l'espacement interne */
+    margin: 0; /* Supprimer la marge externe */
+    display: flex; /* Utiliser flexbox pour aligner les éléments */
+}
+
+.footer-nav li {
+    margin: 0 10px; /* Espacement entre les éléments de la liste */
+}
+
+.footer-nav a {
+    color: white; /* Couleur des liens blanc */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+    font-weight: bold; /* Texte en gras */
+}
+
+.footer-nav a:hover {
+    color: #ff6347; /* Couleur des liens au survol */
+}
 </style>
 </head>
 
