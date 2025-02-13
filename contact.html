@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://use.typekit.net/xwa0zel.css">
  <link rel="icon" href="https://image.noelshack.com/fichiers/2025/02/6/1736632434-logo.png" type="image/png">
 <style>
-  .logo {
+.logo {
     width: 150px; /* Réduit la taille du logo sur les petits écrans */
     height: auto;
 }
@@ -146,7 +146,7 @@ body {
     font-family: 'Poppins';font-size: 22px;
     background-color: black;
     color: white;
-    
+}
 .logo {
     width: 200px; /* largeur */
     height: 200px; /* hauteur */
@@ -205,34 +205,6 @@ header {
 }
 
 /* Menu mobile (caché par défaut) */
-.nav-menu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-}
-
-.nav-menu.active {
-  display: flex;
-}
-
-@media screen and (min-width: 768px) {
-  .burger-menu {
-    display: none;
-  }
-
-  .nav-menu {
-    display: flex;
-    position: static;
-  }
-}
-
-.content {
- text-align: center;
- /* Menu mobile (caché par défaut) */
 .nav-menu {
   display: none;
   flex-direction: column;
@@ -391,6 +363,43 @@ header {
     color: #ff6347; /* Couleur des liens au survol */
 }
 
+h1 {
+    font-style: bold;
+}
+
+
+
+  .sharemysavoir {
+    float: right; 
+    color: white;
+  }
+  button {
+  padding: 17px 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: rgb(255, 56, 86);
+  letter-spacing: 1.5px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: rgb(201, 46, 70) 0px 10px 0px 0px;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+}
+
+button:active {
+  background-color: rgb(255, 56, 86);
+  /*50, 168, 80*/
+  box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 200ms;
+}
+
+  .create {
+    background-color: #FF0000;
 </style>
 </head>
 
