@@ -1,5 +1,10 @@
-OpenBox est un projet français qui a pour but de regrouper un maximum de compétences et de ressources.
-<br>
+## ❔ What's OpenBox
 OpenBox is a French project that aims to bring together a maximum of skills and resources.
-<br>
-Languages: HTML CSS JAVASCRIPT
+
+## 💻 Languages
+
+OpenBox is developed in HTML, CSS and JAVASCRIPT.
+
+## ✉️ Contact Us
+
+<a href="mailto:contact.openbox@proton.me">Contact Us</a>
