@@ -3,7 +3,7 @@ OpenBox is a French project that aims to bring together a maximum of skills and 
 
 ## 💻 Languages
 
-OpenBox is developed in HTML, CSS and JAVASCRIPT.
+OpenBox is developed in HTML, CSS and JAVASCRIPT. The website is only available in French.
 
 ## ✉️ Contact Us
 
