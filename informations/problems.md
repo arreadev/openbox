@@ -1,3 +1,3 @@
 ## LIST OF PROBLEMS
 
-1. Mobile Site Version
+1. Mobile Site Version (Responsive)
