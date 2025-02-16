@@ -17,5 +17,6 @@ OpenBox is developed in HTML, CSS and JAVASCRIPT. The website is only available 
 ## 🌐 WebSite
 
 Our site is hosted by Netlify. 
-[![Visit Website](https://example.com/button-image.png)](https://open-box-web.netlify.app)
+<img href="https://open-box-web.netlify.app/" alt="Website" src="https://img.shields.io/website">
+
 
