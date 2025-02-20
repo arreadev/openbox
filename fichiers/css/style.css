@@ -1,4 +1,5 @@
- .logo {
+/*CSS for index.html*/
+.logo {
     width: 150px; /* Réduit la taille du logo sur les petits écrans */
     height: auto;
 }
